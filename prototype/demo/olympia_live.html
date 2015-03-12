@@ -13,10 +13,10 @@
   <script type="text/javascript">
     $(function() {
       var opts = {
-         tabs : 5,
+         tabs : 3,
          imagePath : "../icons-ios/",
-         icons : ["music", "pictures", "docs", "recipes", "more"],
-         labels : ["Music", "Pictures", "Docs", "Recipes", "More"],
+         icons : ["music", "pictures", "docs"],
+         labels : ["Feed", "Athletes", "Standings"],
          selected : 1
       };
       $.UITabbar(opts);
@@ -51,6 +51,9 @@
     }
     .tabbar > button.recipes > .icon  {
       -webkit-mask-image: url('../images/icons/Download.svg');
+    }
+    .tabbar > button.top_rated > .icon {
+      -webkit-mask-image: url('../images/icons/Favorite.svg');
     }
     .grid > .col {
       background-repeat: no-repeat;
@@ -113,20 +116,37 @@
         background-size: auto 100%;
       }
     }
-    .list > li > ul, .list > li > ol {
-      padding-right: 15px !important;
-      margin-right: 0 !important;
-    }
-    .list > li > ul > li, .list > li > ol > li {
-      padding-right: 0 !important;
-      margin-right: 0;
-    }
   </style>
 </head>
 <body>
-  <nav class="current">
-    <h1>Music</h1>
-  </nav>
+	<nav>
+		<button class='back'>Olympia</button>
+		<h1>Live Events</h1>
+	</nav>
+  <article id='recipes' class='next'>
+    <section>
+      <ul class='list'>
+        <li>
+          <h3>Men 100m Dash</h3>
+       	  <span class='counter'>10:30AM - Event started!</span>
+        </li>
+        <li>
+          <h3>Men 100m Dash</h3>
+       	  <span class='counter'>10:45AM - Race started!</span>
+        </li>
+        </li>
+        <li>
+          <h3>Men 100m Dash</h3>
+       	  <span class='counter'>10:45AM - David Law finished the race in 9.81s!</span>
+        </li>
+      </ul>
+    </section>
+  </article>
+  
+	<nav>
+		<button class='back'>Olympia</button>
+		<h1>Live Events</h1>
+	</nav>
   <article id="music" class="current">
     <section>
       <ul class='list'>
@@ -183,9 +203,11 @@
       </ul>  
     </section>
   </article>
-  <nav class='next'>
-    <h1>Pictures</h1>
-  </nav>
+  
+	<nav>
+		<button class='back'>Olympia</button>
+		<h1>Live Events</h1>
+	</nav>
   <article id='pictures' class='next'>
     <section>
       <div class="grid no-wrap">
@@ -325,361 +347,44 @@
       </ul>          
     </section>
   </article>
+  
   <nav class='next'>
-    <h1>Recipes</h1>
+    <h1>Favorites</h1>
   </nav>
-  <article id='recipes' class='next'>
+  <article id='favorites' class='next'>
     <section>
-      <h2>
-         Special Dishes
-      </h2>
-
       <ul class='list'>
         <li>
-          <h3>
-            Italian Style Meatloaf
-          </h3>
-          <h4>Ingredients</h4>
-          <ul>
-            <li>
-              1 1/2 pounds ground beef
-            </li>
-            <li>
-              2 eggs, beaten
-            </li>
-            <li>
-              3/4 cup dry bread crumbs
-            </li>
-            <li>
-              1/4 cup ketchup
-            </li>
-            <li>
-              1 teaspoon Italian-style seasoning
-            </li>
-            <li>
-              1 teaspoon garlic salt
-            </li>
-            <li>
-              1 (14.5 ounce) can diced tomatoes, drained
-            </li>
-          </ul>
-          <p>Directions</p>
-          <ol>
-            <li>
-              Preheat oven to 350 degrees F (175 degrees C).
-            </li>
-            <li>
-              In a large bowl, mix together ground beef, eggs, bread crumbs and ketchup. Season with Italian-style seasoning, oregano, basil, garlic salt, diced tomatoes and cheese. Press into a 9x5 inch loaf pan, and cover loosely with foil.
-            </li>
-            <li>
-              Bake in the preheated oven approximately 1 hour, or until internal temperature reaches 160 degrees F (70 degrees C).
-            </li>
-          </ol>
+           <h3>Thing One</h3>
         </li>
         <li>
-          <h3>
-            Chicken Marsala
-          </h3>
-          <h4>Ingredients</h4>
-          <ul>
-            <li>
-              1/4 cup all-purpose flour for coating
-            </li>
-            <li>
-              1/2 teaspoon salt
-            </li>
-            <li>
-              1/4 teaspoon ground black pepper
-            </li>
-            <li>
-              1/2 teaspoon dried oregano
-            </li>
-            <li>
-              4 skinless, boneless chicken breast halves - pounded 1/4 inch thick
-            </li>
-            <li>
-              4 tablespoons butter
-            </li>
-            <li>
-              4 tablespoons olive oil
-            </li>
-            <li>
-              1 cup sliced mushrooms
-            </li>
-            <li>
-              1/2 cup Marsala wine
-            </li>
-            <li>
-              1/4 cup cooking sherry
-            </li>
-          </ul>
-          <p>Directions</p>
-          <ol>
-            <li>
-              In a shallow dish or bowl, mix together the flour, salt, pepper and oregano. Coat chicken pieces in flour mixture.
-            </li>
-            <li>
-              In a large skillet, melt butter in oil over medium heat. Place chicken in the pan, and lightly brown. Turn over chicken pieces, and add mushrooms. Pour in wine and sherry. Cover skillet; simmer chicken 10 minutes, turning once, until no longer pink and juices run clear.
-            </li>
-          </ol>
+           <h3>Thing Two</h3>
         </li>
         <li>
-          <h3>Chicken Breasts with Lime Sauce</h3>
-          <h4>Ingredients</h4>
-          <ul>
-            <li>
-              4 skinless, boneless chicken breast halves - pounded to 1/4 inch thickness
-            </li>
-            <li>
-              1 egg, beaten
-            </li>
-            <li>
-              2/3 cup dry bread crumbs
-            </li>
-            <li>
-              2 tablespoons olive oil
-            </li>
-            <li>
-              1 lime, juiced
-            </li>
-            <li>
-              6 tablespoons butter
-            </li>
-            <li>
-              1 teaspoon minced fresh chives
-            </li>
-            <li>
-              1/2 teaspoon dried dill weed
-            </li>
-          </ul>
-          <p>Directions</p>
-          <ol>
-            <li>
-              Coat chicken breasts with egg, and dip in bread crumbs. Place on a wire rack, and allow to dry for about 10 minutes.
-            </li>
-            <li>
-              Heat olive oil in a large skillet over medium heat. Place chicken into the skillet, and fry for 3 to 5 minutes on each side. Remove to a platter, and keep warm.
-            </li>
-            <li>
-              Drain grease from the skillet, and squeeze in lime juice. Cook over low heat until it boils. Add butter, and stir until melted. Season with chives and dill. Spoon sauce over chicken, and serve immediately.
-            </li>
-          </ol>
+           <h3>Thing Three</h3>
         </li>
         <li>
-          <h3>Lemon Rosemary Salmon</h3>
-          <h4>Ingredients</h4>
-          <ul>
-            <li>
-              1 lemon, thinly sliced
-            </li>
-            <li>
-              4 sprigs fresh rosemary
-            </li>
-            <li>
-              2 salmon fillets, bones and skin removed coarse salt to taste
-            </li>
-            <li>
-              1 tablespoon olive oil, or as needed
-            </li>
-          </ul>
-          <p>Directions</p>
-          <ol>
-            <li>
-              Preheat oven to 400 degrees F (200 degrees C).
-            </li>
-            <li>
-              Arrange half the lemon slices in a single layer in a baking dish. Layer with 2 sprigs rosemary, and top with salmon fillets. Sprinkle salmon with salt, layer with remaining rosemary sprigs, and top with remaining lemon slices. Drizzle with olive oil.
-            </li>
-            <li>
-              Bake 20 minutes in the preheated oven, or until fish is easily flaked with a fork.
-            </li>
-          </ol>
+           <h3>Thing Four</h3>
         </li>
         <li>
-          <h3>Strawberry Angel Food Dessert</h3>
-          <h4>Ingredients</h4>
-          <ul>
-            <li>
-              1 (10 inch) angel food cake
-            </li>
-            <li>
-              2 (8 ounce) packages cream cheese, softened
-            </li>
-            <li>
-              1 cup white sugar
-            </li>
-            <li>
-              1 (8 ounce) container frozen whipped topping, thawed
-            </li>
-            <li>
-              1 quart fresh strawberries, sliced
-            </li>
-            <li>
-              1 (18 ounce) jar strawberry glaze
-            </li>
-          </ul>
-          <p>Directions</p>
-          <ol>
-            <li>
-              Crumble the cake into a 9x13 inch dish.
-            </li>
-            <li>
-              Beat the cream cheese and sugar in a medium bowl until light and fluffy. Fold in whipped topping. Mash the cake down with your hands and spread the cream cheese mixture over the cake.
-            </li>
-            <li>
-              In a bowl, combine strawberries and glaze until strawberries are evenly coated. Spread over cream cheese layer. Chill until serving.
-            </li>
-          </ol>
-        </li>
-      </ul>
-    </section>
-  </article>
-  <nav class='next'>
-    <h1>More</h1>
-  </nav>
-  <article id='fruits' class='next'>
-    <section>
-      <h2>Fruits</h2>
-      <ul class='list'>
-        <li class="nav" data-goto="apples">
-          <h3>Apples</h3>
-        </li>
-        <li class="nav" data-goto="oranges">
-          <h3>Oranges</h3>
-        </li>
-        <li class="nav" data-goto="bananas">
-          <h3>Bananas</h3>
-        </li>
-        <li class="nav" data-goto="peaches">
-          <h3>Peaches</h3>
-        </li>
-        <li class="nav" data-goto="strawberries">
-          <h3>Strawberries</h3>
-        </li>
-        <li class="nav" data-goto="cherries">
-          <h3>Cherries</h3>
-        </li>
+           <h3>Thing Five</h3>
+        </li>    
+        <li>
+           <h3>Thing Six</h3>
+        </li>  
+        <li>
+           <h3>Thing Seven</h3>
+        </li>  
+        <li>
+           <h3>Thing Eight</h3>
+        </li>      
+        <li>
+           <h3>Thing Nine</h3>
+        </li>    
+        <li>
+           <h3>Thing Ten</h3>
+        </li>  
        </ul>
-    </section>
-  </article>
-  <nav class="next">
-    <button class="back">Fruits</button>
-    <h1>Apples</h1>
-  </nav>
-  <article class="next" id="apples">
-    <section>
-      <h2>Uses</h2>
-      <ul class="list">
-        <li>
-          <h3>Juice</h3>
-        </li>
-        <li>
-          <h3>Pastries</h3>
-        </li>
-        <li>
-          <h3>Cider</h3>
-        </li>
-      </ul>
-    </section>
-  </article>
-  <nav class="next">
-    <button class="back">Fruits</button>
-    <h1>Oranges</h1>
-  </nav>
-  <article class="next" id="oranges">
-    <section>
-      <h2>Uses</h2>
-      <ul class="list">
-        <li>
-          <h3>Juice</h3>
-        </li>
-        <li>
-          <h3>Smoothies</h3>
-        </li>
-        <li>
-          <h3>Fruit Salad</h3>
-        </li>
-      </ul>
-    </section>
-  </article>
-  <nav class="next">
-    <button class="back">Fruits</button>
-    <h1>Bananas</h1>
-  </nav>
-  <article class="next" id="bananas">
-    <section>
-      <h2>Uses</h2>
-      <ul class="list">
-        <li>
-          <h3>Smoothies</h3>
-        </li>
-        <li>
-          <h3>Pudding</h3>
-        </li>
-        <li>
-          <h3>Fruit Salad</h3>
-        </li>
-      </ul>
-    </section>
-  </article>
-  <nav class="next">
-    <button class="back">Fruits</button>
-    <h1>Peaches</h1>
-  </nav>
-  <article class="next" id="peaches">
-    <section>
-      <h2>Uses</h2>
-      <ul class="list">
-        <li>
-          <h3>Cobbler</h3>
-        </li>
-        <li>
-          <h3>Pie</h3>
-        </li>
-        <li>
-          <h3>Smoothies</h3>
-        </li>
-      </ul>
-    </section>
-  </article>
-  <nav class="next">
-    <button class="back">Fruits</button>
-    <h1>Strawberries</h1>
-  </nav>
-  <article class="next" id="strawberries">
-    <section>
-      <h2>Uses</h2>
-      <ul class="list">
-        <li>
-          <h3>Cereal</h3>
-        </li>
-        <li>
-          <h3>Smoothies</h3>
-        </li>
-        <li>
-          <h3>Fruit Salad</h3>
-        </li>
-      </ul>
-    </section>
-  </article>
-  <nav class="next">
-    <button class="back">Fruits</button>
-    <h1>Cherries</h1>
-  </nav>
-  <article class="next" id="cherries">
-    <section>
-      <h2>Uses</h2>
-      <ul class="list">
-        <li>
-          <h3>Pies</h3>
-        </li>
-        <li>
-          <h3>Pastries</h3>
-        </li>
-        <li>
-          <h3>Fruit Salad</h3>
-        </li>
-      </ul>
     </section>
   </article>
 </body>
