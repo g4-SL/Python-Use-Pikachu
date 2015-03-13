@@ -30,12 +30,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: "templates/menu.html",
     controller: 'AppCtrl'
   })
-/*
+
   .state('app.home', {
     url: "/home",
     views: {
       'menuContent': {
-        templateUrl: "templates/home.html"*/
+        templateUrl: "templates/home.html"
+      }
+    }
+  })
 
   .state('app.firstUser_allegiance', {
     url: "/firstUser_allegiance",
@@ -128,14 +131,53 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-    .state('app.schedule', {
-      url: "/schedule",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/schedule.html",
-        }
+  .state('app.schedule', {
+    url: "/schedule",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/schedule.html",
       }
-    })
+    }
+  })
+
+  .state('app.preference_allegiance', {
+    url: "/preference_allegiance",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/preference_allegiance.html",
+        controller: 'PlaylistCtrl'
+      }
+    }
+  })
+
+  .state('app.preference_sports', {
+    url: "/preference_sports",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/preference_sports.html",
+        controller: 'PlaylistCtrl'
+      }
+    }
+  })
+
+  .state('app.preference_athletes', {
+    url: "/preference_athletes",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/preference_athletes.html",
+        controller: 'PlaylistCtrl'
+      }
+    }
+  })
+	
+  .state('app.medalCount', {
+    url: "/medalCount",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/medalCount.html",
+      }
+    }
+  })
 
   .state('app.single', {
     url: "/playlists/:playlistId",

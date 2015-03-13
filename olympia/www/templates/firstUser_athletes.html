@@ -1,11 +1,18 @@
 <ion-view view-title="Athletes">
   <ion-content>
-  	<h5>Which athletes are you interested in following?</h5>
-	<label class="item item-input">
-	  <i class="icon ion-search placeholder-icon"></i>
-	  <input type="search" placeholder="Search">
-	</label>
-	<br>
+  	<div class="row">
+  		<div class="col">
+  			<h5>Which athletes are you fan of?</h5>
+  		</div>
+  	</div>
+  	<div class="row">
+  		<div class="col">
+			<label class="item item-input">
+			  <i class="icon ion-search placeholder-icon"></i>
+			  <input type="search" placeholder="Search">
+			</label>
+  		</div>
+  	</div>
 
 	<div class="row">
 	  <div class="col">
@@ -75,21 +82,21 @@
 			<a class="button icon-left ion-chevron-left button-calm" href="#/app/firstUser_sports">Previous</a>
 		</div>
 		<div class="col-26 col-offset-10">
-			<a class="button icon-right ion-chevron-right button-assertive" href="#/app/playlists">Submit</a>
+			<a class="button icon-right ion-chevron-right button-assertive" href="#/app/home">Submit</a>
 		</div>
 	</div>
 
   </ion-content>
 	<ion-tabs class="tabs-positive tabs-icon-only">
-		<ion-tab title="Allegiance" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline" href="#/app/firstUser_allegiance">
+		<ion-tab title="Allegiance" href="#/app/firstUser_allegiance">
 		<!-- Tab 1 content -->
 		</ion-tab>
 
-		<ion-tab title="Sports" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline" href="#/app/firstUser_sports">
+		<ion-tab title="Sports" href="#/app/firstUser_sports">
 		<!-- Tab 2 content -->
 		</ion-tab>
 
-		<ion-tab title="Athletes" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline" href="#/app/firstUser_athletes">
+		<ion-tab title="Athletes" href="#/app/firstUser_athletes">
 		<!-- Tab 3 content -->
 		</ion-tab>
 

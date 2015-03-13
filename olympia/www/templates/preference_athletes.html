@@ -1,0 +1,73 @@
+<ion-view view-title="Preferences | Athletes">
+  <ion-content>
+  	<div class="row">
+		<div class="col">
+			<h5>Search new athletes to follow</h5>
+		</div>
+  	</div>
+  	<div class="row">
+		<div class="col col-70">
+		<label class="item item-input">
+		  <i class="icon ion-search placeholder-icon"></i>
+		  <input type="search" placeholder="Search">
+		</label>
+		</div>
+
+		<div class="col col-20">
+			<a class="button button-icon icon ion-plus-circled">
+			</a>
+		</div>
+  	</div>
+	<br>
+	<div class="row">
+	  <div class="col">
+	  	<a class="button button-icon icon">
+	  		<img src="img/country/canada.png">
+	  	</a>
+	  </div>
+	  <div class="col">
+  		<p class="text-center">Canada</p>
+	  </div>
+	  <div class="col">
+	  	<a class="button button-icon icon ion-close-circled">
+	  	</a>
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div class="col">
+	  	<a class="button button-icon icon">
+	  		<img src="img/country/us.png">
+	  	</a> 
+	  </div>
+	  <div class="col">
+  		<p class="text-center">USA</p>
+	  </div>
+	  <div class="col">
+	  	<a class="button button-icon icon ion-close-circled">
+	  	</a>
+	  </div>
+	</div>
+
+	<div class="row">
+		<div class="col col-40 col-offset-60">
+			<a class="button icon-right ion-chevron-right button-calm" ng-click="showDialog()">Confirm</a>
+		</div>
+	</div>
+
+  	</ion-content>
+	<ion-tabs class="tabs-positive tabs-icon-only">
+		<ion-tab title="Allegiance" href="#/app/preference_allegiance">
+		<!-- Tab 1 content -->
+		</ion-tab>
+
+		<ion-tab title="Sports" href="#/app/preference_sports">
+		<!-- Tab 2 content -->
+		</ion-tab>
+
+		<ion-tab title="Athletes" href="#/app/preference_athletes">
+		<!-- Tab 3 content -->
+		</ion-tab>
+
+	</ion-tabs>
+</ion-view>
