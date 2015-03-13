@@ -84,6 +84,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
+    .state('app.schedule', {
+      url: "/schedule",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/schedule.html",
+        }
+      }
+    })
+
   .state('app.single', {
     url: "/playlists/:playlistId",
     views: {
