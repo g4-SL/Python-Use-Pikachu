@@ -30,11 +30,29 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.firstUser', {
-    url: "/firstUser",
+  .state('app.firstUser_allegiance', {
+    url: "/firstUser_allegiance",
     views: {
       'menuContent': {
-        templateUrl: "templates/firstUser.html"
+        templateUrl: "templates/firstUser_allegiance.html"
+      }
+    }
+  })
+
+  .state('app.firstUser_sports', {
+    url: "/firstUser_sports",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/firstUser_sports.html"
+      }
+    }
+  })
+
+  .state('app.firstUser_athletes', {
+    url: "/firstUser_athletes",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/firstUser_athletes.html"
       }
     }
   })
@@ -76,5 +94,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/firstUser_allegiance');
 });
