@@ -36,6 +36,30 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     views: {
       'menuContent': {
         templateUrl: "templates/home.html"
+
+  .state('app.firstUser_allegiance', {
+    url: "/firstUser_allegiance",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/firstUser_allegiance.html"
+      }
+    }
+  })
+
+  .state('app.firstUser_sports', {
+    url: "/firstUser_sports",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/firstUser_sports.html"
+      }
+    }
+  })
+
+  .state('app.firstUser_athletes', {
+    url: "/firstUser_athletes",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/firstUser_athletes.html"
       }
     }
   })
@@ -68,6 +92,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+    .state('app.schedule', {
+      url: "/schedule",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/schedule.html",
+        }
+      }
+    })
+
   .state('app.single', {
     url: "/playlists/:playlistId",
     views: {
@@ -78,5 +111,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/home');
+
+  $urlRouterProvider.otherwise('/app/firstUser_allegiance');
 });
