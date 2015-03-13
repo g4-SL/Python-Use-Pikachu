@@ -73,6 +73,42 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.live_events', {
+    url: "/live_events",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/live_events_00.html"
+      }
+    }
+  })
+
+  .state('app.live_events_01', {
+    url: "/live_events_01",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/live_events_01.html"
+      }
+    }
+  })
+
+  .state('app.live_events_10', {
+    url: "/live_events_10",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/live_events_10.html"
+      }
+    }
+  })
+
+  .state('app.live_events_11', {
+    url: "/live_events_11",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/live_events_11.html"
+      }
+    }
+  })
+
   .state('app.browse', {
     url: "/browse",
     views: {
