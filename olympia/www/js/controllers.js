@@ -45,4 +45,11 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+
+  $scope.showDialog = function() {
+    alert("Changes have been saved");
+    //$scope.modal.show();
+  };
+
+
 });
