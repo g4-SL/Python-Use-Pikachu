@@ -100,6 +100,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+	
+	  .state('app.medalCount', {
+      url: "/medalCount",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/medalCount.html",
+        }
+      }
+    })
 
   .state('app.single', {
     url: "/playlists/:playlistId",
