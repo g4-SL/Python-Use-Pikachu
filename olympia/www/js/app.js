@@ -40,6 +40,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.cover_stories', {
+    url: "/cover_stories",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/cover.html",
+        controller: 'CoverStoryCtrl'
+      }
+    }
+  })
+
+
   .state('app.firstUser_allegiance', {
     url: "/firstUser_allegiance",
     views: {
@@ -121,16 +132,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.playlists', {
-    url: "/playlists",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/playlists.html",
-        controller: 'PlaylistsCtrl'
-      }
-    }
-  })
-
   .state('app.schedule', {
     url: "/schedule",
     views: {
@@ -144,8 +145,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: "/preference_allegiance",
     views: {
       'menuContent': {
-        templateUrl: "templates/preference_allegiance.html",
-        controller: 'PlaylistCtrl'
+        templateUrl: "templates/preference_allegiance.html"
       }
     }
   })
@@ -154,8 +154,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: "/preference_sports",
     views: {
       'menuContent': {
-        templateUrl: "templates/preference_sports.html",
-        controller: 'PlaylistCtrl'
+        templateUrl: "templates/preference_sports.html"
       }
     }
   })
@@ -164,8 +163,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: "/preference_athletes",
     views: {
       'menuContent': {
-        templateUrl: "templates/preference_athletes.html",
-        controller: 'PlaylistCtrl'
+        templateUrl: "templates/preference_athletes.html"
       }
     }
   })
