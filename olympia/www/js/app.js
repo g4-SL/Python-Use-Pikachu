@@ -105,6 +105,24 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.live_feed_01_athelets', {
+    url: "/live_feed_01_athletes",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/live_feed_01_atheletes.html"
+      }
+    }
+  })
+
+    .state('app.live_feed_01_standing', {
+    url: "/live_feed_01_standing",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/live_feed_01_standing.html"
+      }
+    }
+  })
+
   .state('app.live_feed_10', {
     url: "/live_feed_10",
     views: {

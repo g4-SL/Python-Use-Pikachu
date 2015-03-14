@@ -38,3 +38,19 @@
   margin-top: 100%;
   padding-left: 20px;
 }
+
+.event-name {
+  font-size: 12px;
+}
+
+.event-info {
+  text-align: right;
+}
+
+.country-flag {
+  height: 32px;
+}
+
+.athlete {
+  vertical-align: middle;
+}
