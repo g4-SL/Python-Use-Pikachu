@@ -1,6 +1,111 @@
 <ion-view view-title="Standing">
   <ion-content>
-    standing
+    <ion-list>
+      <ion-item class="item-stable"
+                 ng-click="toggleGroup(1)"
+                 ng-class="{active: isGroupShown(1)}">
+         1        
+         &nbsp;
+         He Kexin <img src="img/country/china.png" class="flag">
+         <div class="total">16.725</div>
+       </ion-item>
+       <ion-item class="item-accordion" ng-show="isGroupShown(1)">
+         <div><b>A Score:</b> 7.700</div>
+         <div><b>B Score:</b> 9.025</div>
+       </ion-item>
+      <ion-item class="item-stable"
+                 ng-click="toggleGroup(2)"
+                 ng-class="{active: isGroupShown(2)}">
+         2  
+         &nbsp;
+         Nastia Liukin <img src="img/country/us.png" class="flag">
+         <div class="total">16.725</div>
+       </ion-item>
+       <ion-item class="item-accordion" ng-show="isGroupShown(2)">
+         <div><b>A Score:</b> 7.700</div>
+         <div><b>B Score:</b> 9.025</div>
+       </ion-item>
+
+       <ion-item class="item-stable"
+                  ng-click="toggleGroup(3)"
+                  ng-class="{active: isGroupShown(3)}">
+          <i class="icon" ng-class="isGroupShown(3) ? 'ion-minus' : 'ion-plus'"></i>
+          &nbsp;
+          Yang Yilin <img src="img/country/china.png" class="flag">
+          <div class="total"><i class="icon ion-minus"></i></div>
+        </ion-item>
+        <ion-item class="item-accordion" ng-show="isGroupShown(3)">
+          <div>Up Next</div>
+        </ion-item>
+
+        <ion-item class="item-stable"
+                   ng-click="toggleGroup(4)"
+                   ng-class="{active: isGroupShown(4)}">
+           <i class="icon" ng-class="isGroupShown(4) ? 'ion-minus' : 'ion-plus'"></i>
+           &nbsp;
+           Beth Tweddle <img src="img/country/uk.png" class="flag">
+           <div class="total"><i class="icon ion-minus"></i></div>
+         </ion-item>
+         <ion-item class="item-accordion" ng-show="isGroupShown(4)">
+           <div>On Bench</div>
+         </ion-item>
+
+         <ion-item class="item-stable"
+                    ng-click="toggleGroup(5)"
+                    ng-class="{active: isGroupShown(5)}">
+            <i class="icon" ng-class="isGroupShown(5) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            Anastasia Koval <img src="img/country/ukraine.png" class="flag">
+            <div class="total"><i class="icon ion-minus"></i></div>
+          </ion-item>
+          <ion-item class="item-accordion" ng-show="isGroupShown(5)">
+            <div>On Bench</div>
+          </ion-item>
+          <ion-item class="item-stable"
+                     ng-click="toggleGroup(6)"
+                     ng-class="{active: isGroupShown(6)}">
+             <i class="icon" ng-class="isGroupShown(6) ? 'ion-minus' : 'ion-plus'"></i>
+             &nbsp;
+             Ksenia Semenova <img src="img/country/ukraine.png" class="flag">
+             <div class="total"><i class="icon ion-minus"></i></div>
+           </ion-item>
+           <ion-item class="item-accordion" ng-show="isGroupShown(6)">
+             <div>On Bench</div>
+           </ion-item>
+           <ion-item class="item-stable"
+                      ng-click="toggleGroup(9)"
+                      ng-class="{active: isGroupShown(9)}">
+              <i class="icon" ng-class="isGroupShown(9) ? 'ion-minus' : 'ion-plus'"></i>
+              &nbsp;
+              Ksenia Semenova <img src="img/country/russia.png" class="flag">
+              <div class="total"><i class="icon ion-minus"></i></div>
+            </ion-item>
+            <ion-item class="item-accordion" ng-show="isGroupShown(9)">
+              <div>On Bench</div>
+            </ion-item>
+            <ion-item class="item-stable"
+                       ng-click="toggleGroup(7)"
+                       ng-class="{active: isGroupShown(7)}">
+               <i class="icon" ng-class="isGroupShown(7) ? 'ion-minus' : 'ion-plus'"></i>
+               &nbsp;
+               Steliana Nistor <img src="img/country/romania.png" class="flag">
+               <div class="total"><i class="icon ion-minus"></i></div>
+             </ion-item>
+             <ion-item class="item-accordion" ng-show="isGroupShown(7)">
+               <div>On Bench</div>
+             </ion-item>
+             <ion-item class="item-stable"
+                        ng-click="toggleGroup(8)"
+                        ng-class="{active: isGroupShown(8)}">
+                <i class="icon" ng-class="isGroupShown(8) ? 'ion-minus' : 'ion-plus'"></i>
+                &nbsp;
+                Dariya Zgoba <img src="img/country/ukraine.png" class="flag">
+                <div class="total"><i class="icon ion-minus"></i></div>
+              </ion-item>
+              <ion-item class="item-accordion" ng-show="isGroupShown(8)">
+                <div>On Bench</div>
+              </ion-item>
+     </ion-list>
   </ion-content>
   <ion-tabs class="tabs-positive tabs-icon-only">
     <ion-tab title="Live Feed" href="#/app/live_feed_01" >

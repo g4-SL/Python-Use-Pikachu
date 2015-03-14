@@ -127,7 +127,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: "/live_feed_01_standing",
     views: {
       'menuContent': {
-        templateUrl: "templates/live_feed_01_standing.html"
+        templateUrl: "templates/live_feed_01_standing.html",
+        controller: 'StandingCtrl'
       }
     }
   })
