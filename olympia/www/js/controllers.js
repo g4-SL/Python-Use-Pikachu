@@ -52,12 +52,32 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('PlaylistCtrl', function($scope, $stateParams,$ionicPopup) {
 
   $scope.showDialog = function() {
-    alert("Changes have been saved");
-    //$scope.modal.show();
+    var alertPopup = $ionicPopup.alert({
+     title: 'Confirmation',
+     template: 'Changes have been saved!'
+    });
+    alertPopup.then(function(res) {
+     console.log('Thank you for not eating my delicious ice cream cone');
+    });
   };
 
+   // A confirm dialog
+   $scope.showConfirm = function() {
+     var confirmPopup = $ionicPopup.confirm({
+       title: 'Reminder',
+       template: 'Do you want to set a reminder for this event?'
+/*       templateUrl: 'templates/reminder_popup.html'*/
+     });
+     confirmPopup.then(function(res) {
+       if(res) {
+         console.log('You are sure');
+       } else {
+         console.log('You are not sure');
+       }
+     });
+   };
 
 });
