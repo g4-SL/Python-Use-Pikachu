@@ -80,38 +80,38 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: "/live_events",
     views: {
       'menuContent': {
-        templateUrl: "templates/live_events_00.html"
+        templateUrl: "templates/live_events.html"
       }
     }
   })
 
-  .state('app.live_events_01', {
-    url: "/live_events_01",
+  .state('app.live_feed_01', {
+    url: "/live_feed_01",
     views: {
       'menuContent': {
-        templateUrl: "templates/live_events_01.html"
+        templateUrl: "templates/live_feed_01.html"
       }
     }
   })
 
-  .state('app.live_events_10', {
-    url: "/live_events_10",
+  .state('app.live_feed_10', {
+    url: "/live_feed_10",
     views: {
       'menuContent': {
-        templateUrl: "templates/live_events_10.html"
+        templateUrl: "templates/live_feed_10.html"
       }
     }
   })
 
-  .state('app.live_events_11', {
-    url: "/live_events_11",
+  .state('app.live_feed_11', {
+    url: "/live_feed_11",
     views: {
       'menuContent': {
-        templateUrl: "templates/live_events_11.html"
+        templateUrl: "templates/live_feed_11.html"
       }
     }
   })
-
+  
   .state('app.browse', {
     url: "/browse",
     views: {
