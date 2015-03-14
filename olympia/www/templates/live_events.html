@@ -1,28 +1,28 @@
-<ion-view view-title="Schedule">
+<ion-view view-title="Live Events">
   <ion-content>
-    <div class="row" style="text-align:center">
-        <div class="col">
-            Men 100m Dash
-            <input type="checkbox" ng-model="checked1" ng-init="checked=false" />
-        </div>
-    </div>
-    <div class="row" style="text-align:center">
-        <div class="col">
-            Men Welter Weight Boxing
-            <input type="checkbox" ng-model="checked2" ng-init="checked=false" />
-        </div>
-    </div>
 
+    <ion-checkbox ng-model="checked1" ng-init="checked=false">
+    Men 100m Dash
+    </ion-checkbox>
+    <ion-checkbox ng-model="checked2" ng-init="checked=false">
+    Men Welter Weight Boxing
+    </ion-checkbox>
+    <br>
+    <br>
+
+
+    <div class="row">
     <span ng-if="checked1 && !checked2" class="animate-if">
-      <a href="#/app/live_feed_01">OK!</a>
+      <a class="button icon-right ion-checkmark button-calm" href="#/app/live_feed_01">OK!</a>
     </span>
     
     <span ng-if="!checked1 && checked2" class="animate-if">
-      <a href="#/app/live_feed_10">OK!</a>
+      <a class="button icon-right ion-checkmark button-calm" href="#/app/live_feed_10">OK!</a>
     </span>
 
     <span ng-if="checked1 && checked2" class="animate-if">
-      <a href="#/app/live_feed_11">OK!</a>
+      <a class="button icon-right ion-checkmark button-calm" href="#/app/live_feed_11">OK!</a>
     </span>
+    </div>
   </ion-content>
 </ion-view>
