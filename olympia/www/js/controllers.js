@@ -33,11 +33,23 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('CoverStoryCtrl', function($scope, $ionicSlideBoxDelegate) {
-  console.log("wjat")
+.controller('CoverStoryCtrl', function($scope, $ionicModal, $ionicSlideBoxDelegate) {
   $scope.slideChanged = function(index) {
     $scope.slideIndex = index;
   };
+
+  $ionicModal.fromTemplateUrl('templates/instruction_modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+    $scope.modal.show();
+  });
+
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
