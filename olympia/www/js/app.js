@@ -114,7 +114,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-    .state('app.live_feed_01_standing', {
+  .state('app.live_feed_01_hekexin', {
+    url: "/live_feed_01_hekexin",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/live_feed_01_hekexin.html"
+      }
+    }
+  })
+
+  .state('app.live_feed_01_standing', {
     url: "/live_feed_01_standing",
     views: {
       'menuContent': {
