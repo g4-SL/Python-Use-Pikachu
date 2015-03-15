@@ -52,25 +52,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('LiveEventsCtrl', function($scope) {
-  $scope.live_events = [
-    { title: 'abc', id: 1 },
-    { title: 'def', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
 
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-})
-
-.controller('LiveEventCtrl', function($scope, $stateParams) {
-})
-
-;
 
 
 .controller('StandingCtrl', function($scope, $stateParams,$ionicPopup) {
@@ -87,4 +69,4 @@ angular.module('starter.controllers', [])
   };
 
 });
->>>>>>> f5fe74c996ef8a87be5738bde72a916cb3c103fe
+
