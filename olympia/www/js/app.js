@@ -87,15 +87,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.live_events', {
-    url: "/live_events",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/live_events.html"
-      }
-    }
-  })
-
   .state('app.live_feed_01', {
     url: "/live_feed_01",
     views: {

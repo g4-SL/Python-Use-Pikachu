@@ -53,7 +53,11 @@ angular.module('starter.controllers', [])
 })
 
 
+.controller('PlaylistCtrl', function($scope, $stateParams) {
+})
 
+.controller('LiveEventCtrl', function($scope, $stateParams) {
+})
 
 .controller('StandingCtrl', function($scope, $stateParams,$ionicPopup) {
 
@@ -69,4 +73,3 @@ angular.module('starter.controllers', [])
   };
 
 });
-
