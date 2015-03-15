@@ -217,6 +217,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         templateUrl: "templates/live_events.html",
       }
     }
+  })
+
+    .state('app.live_chat', {
+    url: "/live_chat",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/live_chat.html",
+      }
+    }
   });
   
 
