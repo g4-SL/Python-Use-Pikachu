@@ -70,9 +70,6 @@ angular.module('starter.controllers', [])
 .controller('LiveEventCtrl', function($scope, $stateParams) {
 })
 
-;
-
-
 .controller('StandingCtrl', function($scope, $stateParams,$ionicPopup) {
 
   $scope.toggleGroup = function(group) {
@@ -87,4 +84,3 @@ angular.module('starter.controllers', [])
   };
 
 });
->>>>>>> f5fe74c996ef8a87be5738bde72a916cb3c103fe
