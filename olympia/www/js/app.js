@@ -21,6 +21,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
+
   $stateProvider
 
   .state('app', {
@@ -28,6 +29,53 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     abstract: true,
     templateUrl: "templates/menu.html",
     controller: 'AppCtrl'
+  })
+
+  .state('app.home', {
+    url: "/home",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/home.html"
+      }
+    }
+  })
+
+  .state('app.cover_stories', {
+    url: "/cover_stories",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/cover.html",
+        controller: 'CoverStoryCtrl'
+      }
+    }
+  })
+
+
+  .state('app.firstUser_allegiance', {
+    url: "/firstUser_allegiance",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/firstUser_allegiance.html"
+      }
+    }
+  })
+
+  .state('app.firstUser_sports', {
+    url: "/firstUser_sports",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/firstUser_sports.html"
+      }
+    }
+  })
+
+  .state('app.firstUser_athletes', {
+    url: "/firstUser_athletes",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/firstUser_athletes.html"
+      }
+    }
   })
 
   .state('app.search', {
@@ -39,6 +87,70 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.live_events', {
+    url: "/live_events",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/live_events.html"
+      }
+    }
+  })
+
+  .state('app.live_feed_01', {
+    url: "/live_feed_01",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/live_feed_01.html"
+      }
+    }
+  })
+
+  .state('app.live_feed_01_athelets', {
+    url: "/live_feed_01_athletes",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/live_feed_01_atheletes.html"
+      }
+    }
+  })
+
+  .state('app.live_feed_01_hekexin', {
+    url: "/live_feed_01_hekexin",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/live_feed_01_hekexin.html"
+      }
+    }
+  })
+
+  .state('app.live_feed_01_standing', {
+    url: "/live_feed_01_standing",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/live_feed_01_standing.html",
+        controller: 'StandingCtrl'
+      }
+    }
+  })
+
+  .state('app.live_feed_10', {
+    url: "/live_feed_10",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/live_feed_10.html"
+      }
+    }
+  })
+
+  .state('app.live_feed_11', {
+    url: "/live_feed_11",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/live_feed_11.html"
+      }
+    }
+  })
+  
   .state('app.browse', {
     url: "/browse",
     views: {
@@ -47,15 +159,55 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-    .state('app.playlists', {
-      url: "/playlists",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/playlists.html",
-          controller: 'PlaylistsCtrl'
-        }
+
+  .state('app.schedule', {
+    url: "/schedule",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/schedule.html",
+        controller: 'PlaylistCtrl'
       }
-    })
+    }
+  })
+
+  .state('app.preference_allegiance', {
+    url: "/preference_allegiance",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/preference_allegiance.html",
+        controller: 'PlaylistCtrl'
+      }
+    }
+  })
+
+  .state('app.preference_sports', {
+    url: "/preference_sports",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/preference_sports.html",
+        controller: 'PlaylistCtrl'
+      }
+    }
+  })
+
+  .state('app.preference_athletes', {
+    url: "/preference_athletes",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/preference_athletes.html",
+        controller: 'PlaylistCtrl'
+      }
+    }
+  })
+	
+  .state('app.medalCount', {
+    url: "/medalCount",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/medalCount.html",
+      }
+    }
+  })
 
   .state('app.single', {
     url: "/playlists/:playlistId",
@@ -88,5 +240,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     })
   ;
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+
+  $urlRouterProvider.otherwise('/app/firstUser_allegiance');
 });

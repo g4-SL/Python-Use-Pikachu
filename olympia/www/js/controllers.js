@@ -33,15 +33,23 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+.controller('CoverStoryCtrl', function($scope, $ionicModal, $ionicSlideBoxDelegate) {
+  $scope.slideChanged = function(index) {
+    $scope.slideIndex = index;
+  };
+
+  $ionicModal.fromTemplateUrl('templates/instruction_modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+    $scope.modal.show();
+  });
+
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+
 })
 
 .controller('LiveEventsCtrl', function($scope) {
@@ -65,3 +73,18 @@ angular.module('starter.controllers', [])
 ;
 
 
+.controller('StandingCtrl', function($scope, $stateParams,$ionicPopup) {
+
+  $scope.toggleGroup = function(group) {
+    if ($scope.isGroupShown(group)) {
+      $scope.shownGroup = null;
+    } else {
+      $scope.shownGroup = group;
+    }
+  };
+  $scope.isGroupShown = function(group) {
+    return $scope.shownGroup === group;
+  };
+
+});
+>>>>>>> f5fe74c996ef8a87be5738bde72a916cb3c103fe
