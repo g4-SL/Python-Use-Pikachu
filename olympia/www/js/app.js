@@ -65,7 +65,28 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'PlaylistCtrl'
       }
     }
-  });
+  })
+  
+  .state('app.live_events', {
+      url: "/live_events",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/live_events.html",
+          controller: 'LiveEventsCtrl'
+        }
+      }
+    })
+  
+  .state('app.singleEvent', {
+      url: "/live_events/:live_eventsId",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/event.html",
+          controller: 'LiveEventCtrl'
+        }
+      }
+    })
+  ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
 });

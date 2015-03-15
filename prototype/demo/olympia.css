@@ -1,0 +1,14 @@
+#athletes img{
+	width:70px;
+	margin-right:5px;
+}
+
+#athletes li{
+	padding: 10px 0 0 10px;
+}
+
+#live_events #enter{
+	width:80px;
+	margin-left:1200px;
+	border: 1px solid grey;
+}

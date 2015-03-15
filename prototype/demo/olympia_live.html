@@ -8,8 +8,29 @@
   <meta name="msapplication-tap-highlight" content="no">
   <title>ChocolateChip-UI Android</title>
   <link rel="stylesheet" href="../chui/chui-android-3.8.3.css">
+  <link rel="stylesheet" href="olympia.css">
   <script src="jquery-1.10.0.min.js"></script>
   <script src="../chui/chui-3.8.3.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        // This is just an animation for popup callback, 
+        // Not part of popup functionality.
+        $("#popupMessageTarget").on("webkitAnimationEnd", function() {
+          this.className = "";
+          this.textContent = "";
+        });
+        
+        // Bind event to show the popup:
+        $("button").on("singletap", function() {
+          $.UIPopup({
+            id: "warning",
+            title: 'Attention Viewers!', 
+            message: 'The performance of "Merchant of Venice", Act 4 scene 1, will begin shortly. Thank you for your patiThanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.Thanks for staying with us a bit longer.ence.', 
+            cancelButton: 'Exit' 
+          });
+        });
+      });
+  </script>
   <script type="text/javascript">
     $(function() {
       var opts = {
@@ -123,7 +144,7 @@
 		<button class='back'>Olympia</button>
 		<h1>Live Events</h1>
 	</nav>
-  <article id='recipes' class='next'>
+  <article id='feed' class='next'>
     <section>
       <ul class='list'>
         <li>
@@ -147,68 +168,43 @@
 		<button class='back'>Olympia</button>
 		<h1>Live Events</h1>
 	</nav>
-  <article id="music" class="current">
+  <article id='athletes' class = 'next'>
     <section>
       <ul class='list'>
-        <li class='comp'>
-          <aside>
-            <img title='Imagine Dragons' src="../images/music/Imagine Dragons.jpg" height="80px">
-          </aside>
-          <div>
-            <h3>Imagine Dragons</h3>
-            <h4>Radioactive</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
+        <li>
+          <h3><img src = '../images/olympia/china.png'>He Kexin (CHN) <button class='align-flush'">Info</button></h3>
         </li>
-        <li class='comp'>
-          <aside>
-            <img title='Hurry and Harm' src="../images/music/Hurry and Harm.jpg" height="80px">
-          </aside>
-          <div>
-            <h3>The Hurry and the Harm</h3>
-            <h4>Hurt</h4>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
-          </div>
+        <li >
+          <h3><img src = '../images/olympia/china.png'>Yang Yilin (CHN)</h3>
         </li>
-        <li class='comp'>
-          <aside>
-            <img title='Permanent' src="../images/music/Permanent.jpg" height="80px">
-          </aside>
-          <div>
-            <h3>David Cook</h3>
-            <h4>Permanent</h4>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
-          </div>
+        <li>
+         <h3><img src = '../images/olympia/uk.png'>Beth Tueddle (GBR)</h3>
         </li>
-        <li class='comp'>
-          <aside>
-            <img title='Kiss' src="../images/music/Kiss.jpg" height="80px">
-          </aside>
-          <div>
-            <h3>Kiss</h3>
-            <h4>This Kiss</h4>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.</p>
-          </div>
+        <li>
+          <h3><img src = '../images/olympia/romania.png'>Stellana Nista (ROU)</h3>
         </li>
-        <li class='comp'>
-          <aside>
-            <img title='Willy Moon' src="../images/music/Willy Moon.jpg" height="80px">
-          </aside>
-          <div>
-            <h3>Willy Moon</h3>
-            <h4>Yeah Yeah</h4>
-            <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non.</p>
-          </div>
+        <li>
+          <h3><img src = '../images/olympia/russia.png'>Ksenia Semenova (RUS)</h3>
         </li>
-      </ul>  
+        <li>
+          <h3><img src = '../images/olympia/ukraine.png'>Anastusia Koval (UKR)</h3>
+        </li>
+        <li >
+          <h3><img src = '../images/olympia/ukraine.png'>Dariya Zguba (UKR)</h3>
+        </li>
+        <li>
+          <h3><img src = '../images/olympia/us.png'>Nastia Liukin (USA)</h3>
+        </li>
+      </ul>
     </section>
   </article>
+  
   
 	<nav>
 		<button class='back'>Olympia</button>
 		<h1>Live Events</h1>
 	</nav>
-  <article id='pictures' class='next'>
+  <article id='standings' class='next'>
     <section>
       <div class="grid no-wrap">
         <div class="col flex-1" style="background-image: url('../pics/pic-01.jpg')"></div>
@@ -257,135 +253,6 @@
       </div>
     </section>
   </article>
-  <nav class='next'>
-    <h1>Documents</h1>
-  </nav>
-  <article id='documents' class='next'>
-    <section>
-      <ul class='list'>
-        <li class='comp'>
-          <div>
-            <h3>Receipts</h3>
-          </div>
-          <aside>
-            <h4>Lunch</h4>
-            <span class='counter'>24</span>
-          </aside>
-        </li>
-        <li class='comp'>
-          <div>
-            <h3>Receipts</h3>
-          </div>
-          <aside>
-            <h4>Gas</h4>
-            <span class='counter'>12</span>
-          </aside>
-        </li>
-        <li class='comp'>
-          <div>
-            <h3>Receipts</h3>
-          </div>
-          <aside>
-            <h4>Groceries</h4>
-            <span class='counter'>6</span>
-          </aside>
-        </li>
-        <li class='comp'>
-          <div>
-            <h3>Utilities</h3>
-          </div>
-          <aside>
-            <h4>Electiricity</h4>
-            <span class='counter'>1</span>
-          </aside>
-        </li>
-        <li class='comp'>
-          <div>
-            <h3>Rent</h3>
-          </div>
-          <aside>
-            <h4>Receipt</h4>
-            <span class='counter'>10</span>
-          </aside>
-        </li>
-        <li class='comp'>
-          <div>
-            <h3>Legal</h3>
-          </div>
-          <aside>
-            <h4>Car</h4>
-            <span class='counter'>5</span>
-          </aside>
-        </li>
-        <li class='comp'>
-          <div>
-            <h3>Family</h3>
-          </div>
-          <aside>
-            <h4>Legal</h4>
-            <span class='counter'>3</span>
-          </aside>
-        </li>
-        <li class='comp'>
-          <div>
-            <h3>Personal</h3>
-          </div>
-          <aside>
-            <h4>Will</h4>
-            <span class='counter'>1</span>
-          </aside>
-        </li>
-        <li class='comp'>
-          <div>
-            <h3>Personal</h3>
-          </div>
-          <aside>
-            <h4>Health Care</h4>
-            <span class='counter'>16</span>
-          </aside>
-        </li>
-      </ul>          
-    </section>
-  </article>
-  
-  <nav class='next'>
-    <h1>Favorites</h1>
-  </nav>
-  <article id='favorites' class='next'>
-    <section>
-      <ul class='list'>
-        <li>
-           <h3>Thing One</h3>
-        </li>
-        <li>
-           <h3>Thing Two</h3>
-        </li>
-        <li>
-           <h3>Thing Three</h3>
-        </li>
-        <li>
-           <h3>Thing Four</h3>
-        </li>
-        <li>
-           <h3>Thing Five</h3>
-        </li>    
-        <li>
-           <h3>Thing Six</h3>
-        </li>  
-        <li>
-           <h3>Thing Seven</h3>
-        </li>  
-        <li>
-           <h3>Thing Eight</h3>
-        </li>      
-        <li>
-           <h3>Thing Nine</h3>
-        </li>    
-        <li>
-           <h3>Thing Ten</h3>
-        </li>  
-       </ul>
-    </section>
-  </article>
+
 </body>
 </html>
