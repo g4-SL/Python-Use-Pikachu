@@ -193,7 +193,7 @@ angular.module('starter.controllers', [])
 	$scope.showDialog = function(event,time) {
 		   var confirmPopup = $ionicPopup.confirm({
 		     title: 'Confirm',
-		     template: 'Are you sure about the new changes?'
+		     template: 'Are you sure to remove this?'
 		   });
 		   confirmPopup.then(function(res) {
 		     if(res) {
@@ -209,7 +209,7 @@ angular.module('starter.controllers', [])
 	$scope.showDialog = function(event,time) {
 		   var confirmPopup = $ionicPopup.confirm({
 		     title: 'Confirm',
-		     template: 'Are you sure about the new changes?'
+		     template: 'Are you sure to remove this?'
 		   });
 		   confirmPopup.then(function(res) {
 		     if(res) {
@@ -224,7 +224,7 @@ angular.module('starter.controllers', [])
 	$scope.showDialog = function(event,time) {
 		   var confirmPopup = $ionicPopup.confirm({
 		     title: 'Confirm',
-		     template: 'Are you sure about the new changes?'
+		     template: 'Are you sure to remove this?'
 		   });
 		   confirmPopup.then(function(res) {
 		     if(res) {

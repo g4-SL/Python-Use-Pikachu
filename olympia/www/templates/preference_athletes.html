@@ -25,17 +25,12 @@
 	    <a class="item item-avatar-left item-icon-right" href="#">
 	  		<img ng-src="{{athlete.imageURL}}">
 	      	<h2 ng-bind = "athlete.name"></h2>
-	      	<p ng-bind = "athlete.country"></p>
-	  		<i class="button button-icon icon ion-close-circled"></i>
+	      	<span ng-bind = "athlete.country"></span>
+	  		<button class="button icon-right ion-chevron-right button-calm" ng-click="showDialog()" style = "margin-left:70%;">Remove</button>
 	    </a>
 
 	</div>
 
-	<div class="row">
-		<div class="col col-40 col-offset-60">
-			<a class="button icon-right ion-chevron-right button-calm" ng-click="showDialog()">Confirm</a>
-		</div>
-	</div>
 
   	</ion-content>
 	<ion-tabs class="tabs-positive tabs-icon-only">
