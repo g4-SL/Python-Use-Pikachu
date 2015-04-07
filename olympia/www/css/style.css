@@ -81,3 +81,7 @@
 .country_selection a:focus{
     background-color:yellow;
 }
+
+.popup-body{
+	overflow:initial;
+}

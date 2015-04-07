@@ -7,6 +7,7 @@ angular.module('starter.controllers', [])
 //	$rootScope.athletes = [];
 //	$rootScope.athletes.push({name:"Aliya Garayeva"});
 
+	
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -77,6 +78,10 @@ angular.module('starter.controllers', [])
 
 
   
+})
+
+.controller('HomeCtrl',function($scope){
+
 })
 
 
@@ -181,6 +186,21 @@ angular.module('starter.controllers', [])
 	
 })
 
-
+.controller('ScheduleCtrl',function($scope,$ionicPopup){
+	
+$scope.showConfirm = function(event,time) {
+   var confirmPopup = $ionicPopup.confirm({
+     title: 'Set Notification',
+     template: '<b>Event:</b> '+event+'<br><b>Time:</b> '+time
+   });
+   confirmPopup.then(function(res) {
+     if(res) {
+       console.log('You are sure');
+     } else {
+       console.log('You are not sure');
+     }
+   });
+ };
+})
 
 ;
