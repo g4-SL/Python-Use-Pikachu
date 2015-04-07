@@ -1,10 +1,10 @@
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout,$rootScope) {
-//	$rootScope.allegiance = "China";
-//	$rootScope.sports = [];
+	$rootScope.allegiance = "Canada";
+	$rootScope.sports = [];
 //	$rootScope.sports.push({type:"badminton"});
-//	$rootScope.athletes = [];
+	$rootScope.athletes = [];
 //	$rootScope.athletes.push({name:"Aliya Garayeva"});
 
 	
@@ -141,9 +141,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('firstUserSportsCtrl',function($scope,$rootScope){
-	if ($rootScope.sports == null)
-		$rootScope.sports = [];
-
+		
 	for (var j = 0; j < $rootScope.sports.length ; j++){
 		$("#"+$rootScope.sports[i].type).css("background-color","#C8C8C8");
 	}
@@ -169,8 +167,6 @@ angular.module('starter.controllers', [])
 })
 
 .controller('firstUserAthletesCtrl',function($scope,$rootScope){
-	if ($rootScope.athletes == null)
-		$rootScope.athletes = [];
 	
 	for (var j = 0; j < $rootScope.athletes.length ; j++){
 		$("#"+$rootScope.athletes[i].short_name).css("background-color","#C8C8C8");
