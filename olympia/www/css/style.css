@@ -88,4 +88,17 @@
 
 .col{
 	padding : initial;
+	padding-top:2px;
+}
+
+.col a,.col p{
+	float:left;
+}
+
+.col p{
+	margin-top:5%;
+}
+
+.row {
+	margin-top:0 !important;
 }

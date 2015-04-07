@@ -106,11 +106,11 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('firstUserAllegianceCtrl',function($scope,$rootScope){
+.controller('firstUserAllegianceCtrl',function($scope,$rootScope,$ionicPopup){
 
 	$scope.next = function(){
 		if ($rootScope.allegiance == null){
-			alert("You must select an allegiance!");
+			$scope.showAlert();
 		}
 		else{
 			$("#allegiance_next").attr("href", "#/app/firstUser_sports");
@@ -128,6 +128,16 @@ angular.module('starter.controllers', [])
 			$("#Canada").css("background-color","white");	
 		}
 	};
+	
+	 $scope.showAlert = function() {
+		   var alertPopup = $ionicPopup.alert({
+		     title: 'Alert',
+		     template: 'You must select an allegiance!'
+		   });
+		   alertPopup.then(function(res) {
+		     console.log('Thank you for not eating my delicious ice cream cone');
+		   });
+		 };
 })
 
 .controller('firstUserSportsCtrl',function($scope,$rootScope){
@@ -177,7 +187,7 @@ angular.module('starter.controllers', [])
 
 	};
 })
-.controller('PreferenceAllegianceCtrl',function($scope,$ionicPopup){
+.controller('PreferenceAllegianceCtrl',function($scope,$rootScope,$ionicPopup){
 	//$rootScope.allegiance = "Canada";
 	$scope.imageURL = "img/country/"+$rootScope.allegiance+".png";
 	$scope.showDialog = function(event,time) {
@@ -195,7 +205,7 @@ angular.module('starter.controllers', [])
 		 };
 	
 })
-.controller('PreferenceSportsCtrl',function($scope,$ionicPopup){
+.controller('PreferenceSportsCtrl',function($scope,$rootScope,$ionicPopup){
 	$scope.showDialog = function(event,time) {
 		   var confirmPopup = $ionicPopup.confirm({
 		     title: 'Confirm',
@@ -210,7 +220,7 @@ angular.module('starter.controllers', [])
 		   });
 		 };
 })
-.controller('PreferenceAthletesCtrl',function($scope,$ionicPopup){
+.controller('PreferenceAthletesCtrl',function($scope,$rootScope,$ionicPopup){
 	$scope.showDialog = function(event,time) {
 		   var confirmPopup = $ionicPopup.confirm({
 		     title: 'Confirm',
@@ -225,7 +235,7 @@ angular.module('starter.controllers', [])
 		   });
 		 };
 })
-.controller('ScheduleCtrl',function($scope,$ionicPopup){
+.controller('ScheduleCtrl',function($scope,$rootScope,$ionicPopup){
 	
 $scope.showConfirm = function(event,time) {
    var confirmPopup = $ionicPopup.confirm({
