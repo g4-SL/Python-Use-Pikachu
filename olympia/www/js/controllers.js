@@ -185,7 +185,7 @@ angular.module('starter.controllers', [])
 		}
 		
 		if(found == false){
-			var athleteObj = {name:athlete,imageURL:"img/athletes/"+short_name+".png",country:country};
+			var athleteObj = {name:athlete,short_name:short_name,imageURL:"img/athletes/"+short_name+".png",country:country};
 			$rootScope.athletes.push(athleteObj);
 			$("#"+short_name).css("background-color","#C8C8C8");
 		}
