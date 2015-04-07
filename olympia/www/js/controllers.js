@@ -177,15 +177,54 @@ angular.module('starter.controllers', [])
 
 	};
 })
-.controller('PreferenceAllegianceCtrl',function($scope,$rootScope){
+.controller('PreferenceAllegianceCtrl',function($scope,$ionicPopup){
 	//$rootScope.allegiance = "Canada";
 	$scope.imageURL = "img/country/"+$rootScope.allegiance+".png";
+	$scope.showDialog = function(event,time) {
+		   var confirmPopup = $ionicPopup.confirm({
+		     title: 'Confirm',
+		     template: 'Are you sure about the new changes?'
+		   });
+		   confirmPopup.then(function(res) {
+		     if(res) {
+		       console.log('You are sure');
+		     } else {
+		       console.log('You are not sure');
+		     }
+		   });
+		 };
 	
 })
-.controller('PreferenceSportsCtrl',function($scope,$rootScope){
-	
+.controller('PreferenceSportsCtrl',function($scope,$ionicPopup){
+	$scope.showDialog = function(event,time) {
+		   var confirmPopup = $ionicPopup.confirm({
+		     title: 'Confirm',
+		     template: 'Are you sure about the new changes?'
+		   });
+		   confirmPopup.then(function(res) {
+		     if(res) {
+		       console.log('You are sure');
+		     } else {
+		       console.log('You are not sure');
+		     }
+		   });
+		 };
 })
-
+.controller('PreferenceAthletesCtrl',function($scope,$ionicPopup){
+	$scope.showDialog = function(event,time) {
+		   var confirmPopup = $ionicPopup.confirm({
+		     title: 'Confirm',
+		     template: 'Are you sure about the new changes?'
+		   });
+		   confirmPopup.then(function(res) {
+		     if(res) {
+		       console.log('You are sure');
+		     } else {
+		       console.log('You are not sure');
+		     }
+		   });
+		 };
+})
 .controller('ScheduleCtrl',function($scope,$ionicPopup){
 	
 $scope.showConfirm = function(event,time) {

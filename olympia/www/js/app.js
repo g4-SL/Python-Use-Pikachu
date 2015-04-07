@@ -190,7 +190,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     views: {
       'menuContent': {
         templateUrl: "templates/preference_athletes.html",
-        controller: 'PlaylistCtrl'
+        controller: 'PreferenceAthletesCtrl'
       }
     }
   })
