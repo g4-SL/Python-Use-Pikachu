@@ -144,6 +144,10 @@ angular.module('starter.controllers', [])
 	if ($rootScope.sports == null)
 		$rootScope.sports = [];
 
+	for (var j = 0; j < $rootScope.sports.length ; j++){
+		$("#"+$rootScope.sports[i].type).css("background-color","#C8C8C8");
+	}
+	
 	$scope.setSport = function(sport){
 		var found = false;
 		for (var i = 0 ; i < $rootScope.sports.length; i++){
@@ -168,6 +172,11 @@ angular.module('starter.controllers', [])
 	if ($rootScope.athletes == null)
 		$rootScope.athletes = [];
 	
+	for (var j = 0; j < $rootScope.athletes.length ; j++){
+		$("#"+$rootScope.athletes[i].short_name).css("background-color","#C8C8C8");
+	}
+		
+		
 	$scope.setAthlete = function(athlete,short_name,country){
 		var found = false;
 		for (var i = 0 ; i < $rootScope.athletes.length; i++){
