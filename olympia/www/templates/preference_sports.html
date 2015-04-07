@@ -20,24 +20,13 @@
   	</div>
 	<br>
 
-	<div class="list">
+	<div class="list" ng-repeat = "sport in sports">
 	    <a class="item item-avatar-left item-icon-right" href="#">
-	  		<img src="img/sports/sailing.png">
-	      	<h2>Sailing</h2>
+	  		<img ng-src = {{sport.imageURL}}>
+	      	<h2 ng-bind = "sport.type"></h2>
 	  		<i class="button button-icon icon ion-close-circled"></i>
 	    </a>
 
-	    <a class="item item-avatar-left item-icon-right" href="#">
-	  		<img src="img/sports/diving.png">
-	      	<h2>Diving</h2>
-	  		<i class="button button-icon icon ion-close-circled"></i>
-	    </a>
-
-	    <a class="item item-avatar-left item-icon-right" href="#">
-	  		<img src="img/sports/waterpolo.png">
-	      	<h2>Water Polo</h2>
-	  		<i class="button button-icon icon ion-close-circled"></i>
-	    </a>
 
 	</div>
 

@@ -1,6 +1,5 @@
 <ion-view view-title="Sports">
   <ion-content>
-
   	<div class="row">
   		<div class="col">
 			<label class="item item-input"  style = 'height:35px !important;'>
@@ -11,20 +10,20 @@
   	</div>
 
 	<div class="row">
-	  <div class="col">
-	  	<a class="button button-icon icon">
+	  <div id = "diving" class="col">
+	  	<a ng-click = "setSport('diving')" class="button button-icon icon">
 	  		<img src="img/sports/diving.png">
 	  	</a> 
   		<p class="text-center">Diving</p>
 	  </div>
-	  <div class="col">
-	  	<a class="button button-icon icon">
-	  		<img src="img/sports/swim.png">
+	  <div id = "swimming" class="col">
+	  	<a ng-click = "setSport('swimming')" class="button button-icon icon">
+	  		<img src="img/sports/swimming.png">
 	  	</a> 
-  		<p class="text-center">Swim</p>
+  		<p class="text-center">Swimming</p>
 	  </div>
-	  <div class="col">
-	  	<a class="button button-icon icon">
+	  <div id = "sailing" class="col">
+	  	<a ng-click = "setSport('sailing')" class="button button-icon icon">
 	  		<img src="img/sports/sailing.png">
 	  	</a> 
   		<p class="text-center">Sailing</p>
@@ -32,20 +31,20 @@
 	</div>
 	
 	<div class="row">
-	  <div class="col">
-	  	<a class="button button-icon icon">
-	  		<img src="img/sports/waterpolo.png">
+	  <div id = "water_polo" class="col">
+	  	<a ng-click = "setSport('water_polo')" class="button button-icon icon">
+	  		<img src="img/sports/water_polo.png">
 	  	</a> 
   		<p class="text-center">Water Polo</p>
 	  </div>
-	  <div class="col">
-	  	<a class="button button-icon icon">
+	  <div id = "cycling" class="col">
+	  	<a ng-click = "setSport('cycling')" class="button button-icon icon">
 	  		<img src="img/sports/cycling.png">
 	  	</a> 
   		<p class="text-center">Cycling</p>
 	  </div>
-	  <div class="col">
-	  	<a class="button button-icon icon">
+	  <div id = "fencing" class="col">
+	  	<a ng-click = "setSport('fencing')" class="button button-icon icon">
 	  		<img src="img/sports/fencing.png">
 	  	</a> 
   		<p class="text-center">Fencing</p>
@@ -53,20 +52,20 @@
 	</div>
 
 	<div class="row">
-	  <div class="col">
-	  	<a class="button button-icon icon">
+	  <div  id = "football" class="col">
+	  	<a ng-click = "setSport('football')" class="button button-icon icon">
 	  		<img src="img/sports/football.png">
 	  	</a> 
   		<p class="text-center">Football</p>
 	  </div>
-	  <div class="col">
-	  	<a class="button button-icon icon">
-	  		<img src="img/sports/tabletennis.png">
+	  <div id = "table_tennis" class="col">
+	  	<a ng-click = "setSport('table_tennis')" class="button button-icon icon">
+	  		<img src="img/sports/table_tennis.png">
 	  	</a> 
   		<p class="text-center">Table Tennis</p>
 	  </div>
-	  <div class="col">
-	  	<a class="button button-icon icon">
+	  <div id = "badminton" class="col">
+	  	<a ng-click = "setSport('badminton')" class="button button-icon icon">
 	  		<img src="img/sports/badminton.png">
 	  	</a> 
   		<p class="text-center">Badminton</p>
@@ -78,7 +77,7 @@
 			<a class="button icon-left ion-chevron-left button-calm" href="#/app/firstUser_allegiance">Previous</a>
 		</div>
 		<div class="col-30 col-offset-20">
-			<a class="button icon-right ion-chevron-right button-calm" href="#/app/firstUser_athletes">Next</a>
+			<a ng-click = "next()" class="button icon-right ion-chevron-right button-calm" href="#/app/firstUser_athletes">Next</a>
 		</div>
 	</div>
 

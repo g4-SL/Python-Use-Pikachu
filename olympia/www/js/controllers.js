@@ -1,6 +1,12 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout,$rootScope) {
+//	$rootScope.allegiance = "China";
+//	$rootScope.sports = [];
+//	$rootScope.sports.push({type:"badminton"});
+//	$rootScope.athletes = [];
+//	$rootScope.athletes.push({name:"Aliya Garayeva"});
+
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -33,7 +39,26 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('CoverStoryCtrl', function($scope, $ionicModal, $ionicSlideBoxDelegate) {
+.controller('CoverStoryCtrl', function($scope, $ionicModal, $ionicSlideBoxDelegate,$rootScope) {
+	
+	  $scope.existed = function(section,param){
+		  if (section == 'sport'){
+			  for (var i = 0 ; i < $rootScope.sports.length;i++){
+				  if ($rootScope.sports[i].type == param)
+					  return true;
+			  }
+
+		  }
+		  else{
+			  for (var i = 0 ; i < $rootScope.athletes.length;i++){
+				  if ($rootScope.athletes[i].name == param){
+					  return true;
+				  }
+			  }
+		  }
+		  return false;
+	  };
+	
   $scope.slideChanged = function(index) {
     $scope.slideIndex = index;
   };
@@ -50,6 +75,8 @@ angular.module('starter.controllers', [])
     $scope.modal.hide();
   };
 
+
+  
 })
 
 
@@ -72,4 +99,88 @@ angular.module('starter.controllers', [])
     return $scope.shownGroup === group;
   };
 
-});
+})
+
+.controller('firstUserAllegianceCtrl',function($scope,$rootScope){
+
+	$scope.next = function(){
+		if ($rootScope.allegiance == null){
+			alert("You must select an allegiance!");
+		}
+		else{
+			$("#allegiance_next").attr("href", "#/app/firstUser_sports");
+			$("#allegiance_next").trigger("click");
+		}
+		};
+	$scope.setAllegiance = function(country){
+		$rootScope.allegiance = country;
+		if (country == "Canada"){
+			$("#"+country).css("background-color","#C8C8C8");
+			$("#China").css("background-color","white");
+		}
+		else{
+			$("#"+country).css("background-color","#C8C8C8");
+			$("#Canada").css("background-color","white");	
+		}
+	};
+})
+
+.controller('firstUserSportsCtrl',function($scope,$rootScope){
+	if ($rootScope.sports == null)
+		$rootScope.sports = [];
+
+	$scope.setSport = function(sport){
+		var found = false;
+		for (var i = 0 ; i < $rootScope.sports.length; i++){
+			if ($rootScope.sports[i].type == sport){
+				$rootScope.sports.splice(i, 1);
+				$("#"+sport).css("background-color","white");
+				found = true;
+				break;
+			}
+				
+		}
+		
+		if(found == false){
+			var sportObj = {type:sport,imageURL:"img/sports/"+sport+".png"};
+			$rootScope.sports.push(sportObj);
+			$("#"+sport).css("background-color","#C8C8C8");
+		}
+	};
+})
+
+.controller('firstUserAthletesCtrl',function($scope,$rootScope){
+	if ($rootScope.athletes == null)
+		$rootScope.athletes = [];
+	
+	$scope.setAthlete = function(athlete,short_name,country){
+		var found = false;
+		for (var i = 0 ; i < $rootScope.athletes.length; i++){
+			if ($rootScope.athletes[i].name == athlete){
+				$rootScope.athletes.splice(i, 1);
+				$("#"+short_name).css("background-color","white");
+				found = true;
+				break;
+			}
+		}
+		
+		if(found == false){
+			var athleteObj = {name:athlete,imageURL:"img/athletes/"+short_name+".png",country:country};
+			$rootScope.athletes.push(athleteObj);
+			$("#"+short_name).css("background-color","#C8C8C8");
+		}
+
+	};
+})
+.controller('PreferenceAllegianceCtrl',function($scope,$rootScope){
+	//$rootScope.allegiance = "Canada";
+	$scope.imageURL = "img/country/"+$rootScope.allegiance+".png";
+	
+})
+.controller('PreferenceSportsCtrl',function($scope,$rootScope){
+	
+})
+
+
+
+;

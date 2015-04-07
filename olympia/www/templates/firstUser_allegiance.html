@@ -1,6 +1,5 @@
 <ion-view view-title="Allegiance">
   <ion-content>
-
   	<div class="row">
   		<div class="col">
 			<label class="item item-input" style = 'height:35px !important;'>
@@ -23,11 +22,11 @@
 	  	</a> 
   		<p class="text-center">France</p>
 	  </div>
-	  <div class="col">
-	  	<a class="button button-icon icon">
-	  		<img src="img/country/puertorico.png">
+	  <div id = "China" class="col country_selection">
+	  	<a ng-click = "setAllegiance('China')"  class="button button-icon icon">
+	  		<img src="img/country/china.png">
 	  	</a> 
-  		<p class="text-center">Puerto Rico</p>
+  		<p class="text-center">China</p>
 	  </div>
 	</div>
 
@@ -44,8 +43,8 @@
 	  	</a> 
   		<p class="text-center">US</p>
 	  </div>
-	  <div class="col">
-	  	<a class="button button-icon icon">
+	  <div id = "Canada" class="col">
+	  	<a ng-click = "setAllegiance('Canada')"   class="button button-icon icon">
 	  		<img src="img/country/canada.png">
 	  	</a> 
   		<p class="text-center">Canada</p>
@@ -74,8 +73,8 @@
 	</div>
 
 	<div class="row">
-		<div class="col col-33 col-offset-67">
-			<a class="button icon-right ion-chevron-right button-calm" href="#/app/firstUser_sports">Next</a>
+		<div  class="col col-33 col-offset-67">
+			<a id = "allegiance_next" ng-click = "next()" class="button icon-right ion-chevron-right button-calm" >Next</a>
 		</div>
 	</div>
 

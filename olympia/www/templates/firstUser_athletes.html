@@ -11,65 +11,65 @@
   	</div>
 
 	<div class="row">
-	  <div class="col">
-	  	<a class="button button-icon icon">
+	  <div id = "alina" class="col">
+	  	<a ng-click = "setAthlete('Alina Maksymenko','alina','Ukraine')" class="button button-icon icon">
 	  		<img src="img/athletes/alina.png" height="70" width="70">
 	  	</a> 
-  		<p class="text-center">Alina</p>
+  		<p class="text-center"><b>Alina Maksymenko</b> (Ukraine)</p>
 	  </div>
-	  <div class="col">
-	  	<a class="button button-icon icon">
+	  <div id = "aliya" class="col">
+	  	<a ng-click = "setAthlete('Aliya Garayeva','aliya','Azerbaijan')" class="button button-icon icon">
 	  		<img src="img/athletes/aliya.png" height="70" width="70">
 	  	</a> 
-  		<p class="text-center">Aliya</p>
+  		<p class="text-center"><b>Aliya Garayeva</b> (Azerbaijan)</p>
 	  </div>
-	  <div class="col">
-	  	<a class="button button-icon icon">
+	  <div id = "daria" class="col">
+	  	<a ng-click = "setAthlete('Daria Dmitrieva','daria','Russia')" class="button button-icon icon">
 	  		<img src="img/athletes/daria.png" height="70" width="70">
 	  	</a> 
-  		<p class="text-center">Daria</p>
+  		<p class="text-center"><b>Daria Dmitrieva</b> (Russia)</p>
 	  </div>
 	</div>
 	
 	<div class="row">
-	  <div class="col">
-	  	<a class="button button-icon icon">
+	  <div id = "joanna" class="col">
+	  	<a ng-click = "setAthlete('Joanna Mitrosz','joanna','Poland')" class="button button-icon icon">
 	  		<img src="img/athletes/joanna.png" height="70" width="70">
 	  	</a> 
-  		<p class="text-center">Joanna</p>
+  		<p class="text-center"><b>Joanna Mitrosz</b> (Poland)</p>
 	  </div>
-	  <div class="col">
-	  	<a class="button button-icon icon">
+	  <div id = "liubov" class="col">
+	  	<a ng-click = "setAthlete('Liubov Charkashyna','liubov','Belarus')" class="button button-icon icon">
 	  		<img src="img/athletes/liubov.png" height="70" width="70">
 	  	</a> 
-  		<p class="text-center">Liubov</p>
+  		<p class="text-center"><b>Liubov Charkashyna</b> (Belarus)</p>
 	  </div>
-	  <div class="col">
-	  	<a class="button button-icon icon">
+	  <div id = "neta" class="col">
+	  	<a ng-click = "setAthlete('Neta Rivkin','neta','Israel')" class="button button-icon icon">
 	  		<img src="img/athletes/neta.png" height="70" width="70">
 	  	</a> 
-  		<p class="text-center">Neta</p>
+  		<p class="text-center"><b>Neta Rivkin</b> (Israel)</p>
 	  </div>
 	</div>
 
 	<div class="row">
-	  <div class="col">
-	  	<a class="button button-icon icon">
+	  <div id = "son" class="col">
+	  	<a ng-click = "setAthlete('Son Yeon-Jae','son','Korea')" class="button button-icon icon">
 	  		<img src="img/athletes/son.png" height="70" width="70">
 	  	</a> 
-  		<p class="text-center">Son</p>
+  		<p class="text-center"><b>Son Yeon-Jae</b> (Korea)</p>
 	  </div>
-	  <div class="col">
-	  	<a class="button button-icon icon">
+	  <div id = "sylvia" class="col">
+	  	<a ng-click = "setAthlete('Sylvia Miteva', 'sylvia','Bulgaria')" class="button button-icon icon">
 	  		<img src="img/athletes/sylvia.png" height="70" width="70">
 	  	</a> 
-  		<p class="text-center">Sylvia</p>
+  		<p class="text-center"><b>Sylvia Miteva</b> (Bulgaria)</p>
 	  </div>
-	  <div class="col">
-	  	<a class="button button-icon icon">
-	  		<img src="img/athletes/yege.png" height="70" width="70">
+	  <div id = "yevge" class="col">
+	  	<a ng-click = "setAthlete('Yevgeniya Kanayeva','yevge','Russia')" class="button button-icon icon">
+	  		<img src="img/athletes/yevge.png" height="70" width="70">
 	  	</a> 
-  		<p class="text-center">Yevgeniya</p>
+  		<p class="text-center"><b>Yevgeniya Kanayeva</b> (Russia)</p>
 	  </div>
 	</div>
 
@@ -78,7 +78,7 @@
 			<a class="button icon-left ion-chevron-left button-calm" href="#/app/firstUser_sports">Previous</a>
 		</div>
 		<div class="col-26 col-offset-10">
-			<a class="button icon-right ion-chevron-right button-assertive" href="#/app/home">Submit</a>
+			<a ng-click = "next()" class="button icon-right ion-chevron-right button-assertive" href="#/app/home">Submit</a>
 		</div>
 	</div>
 

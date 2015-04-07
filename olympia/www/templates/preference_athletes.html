@@ -20,25 +20,12 @@
   	</div>
 	<br>
 
-	<div class="list">
+	<div class="list" ng-repeat = "athlete in athletes">
+		
 	    <a class="item item-avatar-left item-icon-right" href="#">
-	  		<img src="img/athletes/son.png">
-	      	<h2>Son-Yeon Jae</h2>
-	      	<p>South Korea</p>
-	  		<i class="button button-icon icon ion-close-circled"></i>
-	    </a>
-
-	    <a class="item item-avatar-left item-icon-right" href="#">
-	  		<img src="img/athletes/aliya.png">
-	      	<h2>Aliya Garayeva</h2>
-	      	<p>Azerbaijan</p>
-	  		<i class="button button-icon icon ion-close-circled"></i>
-	    </a>
-
-	    <a class="item item-avatar-left item-icon-right" href="#">
-	  		<img src="img/athletes/neta.png">
-	      	<h2>Neta Rivkin</h2>
-	      	<p>Israel</p>
+	  		<img ng-src="{{athlete.imageURL}}">
+	      	<h2 ng-bind = "athlete.name"></h2>
+	      	<p ng-bind = "athlete.country"></p>
 	  		<i class="button button-icon icon ion-close-circled"></i>
 	    </a>
 

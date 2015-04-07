@@ -1,8 +1,10 @@
 <ion-view view-title="Olympia">
   <ion-content>
     <a href="#/app/cover_stories">
-        <img src="img/cover/He_Kexin2.jpg" class="cover-image">
-        <h2 class="cover-header">He Kexin Wins Gold</h2>
+        <img ng-if = "allegiance == 'China'" src="img/cover/Shooting_BIG.jpg" class="cover-image">
+        <img ng-if = "allegiance == 'Canada'" src="img/cover/Rosie_MacLennan.jpg" class="cover-image">
+        <h2 ng-if = "allegiance == 'China'" class="cover-header">China's Yi Siling wins first gold medal of London 2012</h2>
+        <h2 ng-if = "allegiance == 'Canada'" class="cover-header">Rosie MacLennan wins nation's first 2012 gold medal</h2>
     </a>
     <ul class="list">
         <li class="item">
@@ -16,9 +18,6 @@
         </li>
         <li class="item">
           <a href="#/app/preference_allegiance">Preferences</a>
-        </li>
-        <li class="item">
-          <a href="#/app/live_chat">Chat</a>
         </li>
     </ul>
   </ion-content>

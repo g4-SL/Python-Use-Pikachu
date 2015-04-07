@@ -55,7 +55,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: "/firstUser_allegiance",
     views: {
       'menuContent': {
-        templateUrl: "templates/firstUser_allegiance.html"
+        templateUrl: "templates/firstUser_allegiance.html",
+        controller: 'firstUserAllegianceCtrl'
       }
     }
   })
@@ -64,7 +65,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: "/firstUser_sports",
     views: {
       'menuContent': {
-        templateUrl: "templates/firstUser_sports.html"
+        templateUrl: "templates/firstUser_sports.html",
+        controller: 'firstUserSportsCtrl'
       }
     }
   })
@@ -73,7 +75,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: "/firstUser_athletes",
     views: {
       'menuContent': {
-        templateUrl: "templates/firstUser_athletes.html"
+        templateUrl: "templates/firstUser_athletes.html",
+        controller: 'firstUserAthletesCtrl'
       }
     }
   })
@@ -166,7 +169,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     views: {
       'menuContent': {
         templateUrl: "templates/preference_allegiance.html",
-        controller: 'PlaylistCtrl'
+        controller: 'PreferenceAllegianceCtrl'
       }
     }
   })
@@ -176,7 +179,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     views: {
       'menuContent': {
         templateUrl: "templates/preference_sports.html",
-        controller: 'PlaylistCtrl'
+        controller: 'PreferenceSportsCtrl'
       }
     }
   })

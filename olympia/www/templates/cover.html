@@ -1,41 +1,92 @@
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <ion-view view-title="Olympia">
-  <ion-content>
+  <ion-content ng-cloak>
 
 
     <ion-slide-box on-slide-changed="slideHasChanged($index)">
+    
       <ion-slide>
         <div class="box s_lide">
-          <img src="img/cover/He_Kexin2.jpg" class="cover-image">
-          <h2 class="article_title">He Kexin Wins Gold</h2>
-          <div class="article_content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus efficitur felis in molestie eleifend. Aenean feugiat augue et enim pulvinar iaculis. Mauris arcu felis, feugiat vitae scelerisque non, sollicitudin vel massa. Nulla eu odio est. Suspendisse vel sapien dolor. Suspendisse potenti. Cras rutrum id turpis quis tincidunt. Nullam a blandit ante, pulvinar blandit arcu. Nulla facilisi.
+         <img  ng-if = "allegiance == 'China'" src="img/cover/Shooting_BIG.jpg" class="cover-image">
+          <img ng-if = "allegiance == 'Canada'" src="img/cover/Rosie_MacLennan.jpg" class="cover-image">
+          <h2 ng-if = "allegiance == 'China'" class="article_title">China's Yi Siling wins first gold medal of London 2012</h2>
+          <h2 ng-if = "allegiance == 'Canada'" class="article_title">Rosie MacLennan wins nation's first 2012 gold medal</h2>
+                    <div  ng-if = "allegiance == 'China'" class="article_content">
+          Yi Siling of China won the first gold medal of the London 2012 Olympic Games after securing victory in the women's 10m air rifle at the Royal Artillery Barracks on Saturday.
+The 23-year-old world number one took the Olympic title with her last two shots, finishing on a total of 502.9 points as Poland's Sylwia Bogacka claimed the silver medal and Yu Dan of China finished in bronze-medal position.
 
-            Fusce finibus leo nec magna finibus mollis. Nunc placerat cursus cursus. Donec luctus pharetra elit, eget efficitur dolor tincidunt vel. Aliquam sodales tempor sollicitudin.
-          </div>
+Bogacka had been leading until the eighth attempt of the 10-shot final, when a wayward effort handed Yi first place.
+
+"It was very exciting,” said Yi afterwards. “I’m very happy. I'm very grateful to China and to my mother and father who I love very much."
+
+"I am pleased, not nervous like I was in the competition,” she added. "I have been up since 5 this morning. There was a lot of pressure on me."
+          
         </div>
+          <div ng-if = "allegiance == 'Canada'" class="article_content">
+ LONDON — The number, the instant it flashed up on the North Greenwich Arena scoreboard, ignited audible gasps, then a deafening wall of sound. “My score?’’ repeated Rosie MacLennan a half-hour later, an Olympic gold medal draped around her neck and a 57.3 personal best on the books. “I was shocked. It’s the biggest score I’ve ever gotten by, I think, just under a point. I knew it would be a tough one to catch, but you never want to get ahead of yourself.’’ Teammate Karen Cockburn didn’t mind doing a bit of predicting, though, right then, right there. “I mean, 57.3 is huge,’’ marvelled the three-medal Olympian competing in her fourth and final Games. “As soon as I saw that score, I knew she had it. I even told her. I saw the faces [of still-to-compete Huang Shanshan and He Wenna], the pressure it put on them. I knew they’d feel the heat of that huge score. As soon as I saw it I said ‘That’s a gold medal.’ ” Indeed, a 23-year-old pixie from Toronto, a product of the Sky Riders trampoline factory, landed Canada’s first gold medal of the Games. “I’m ecstatic,’’ said MacLennan. “It hasn’t quite hit me yet.’’        </div>
+    
+     </div>
       </ion-slide>
-      <ion-slide>
+      
+      
+      <ion-slide >
         <div class="box s_lide">
-          <img src="img/cover/oly_g_phelps_s_576.jpg" class="cover-image">
-          <h2 class="article_title">Phelps-World Record</h2>
-          <div class="article_content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus efficitur felis in molestie eleifend. Aenean feugiat augue et enim pulvinar iaculis. Mauris arcu felis, feugiat vitae scelerisque non, sollicitudin vel massa. Nulla eu odio est. Suspendisse vel sapien dolor. Suspendisse potenti. Cras rutrum id turpis quis tincidunt. Nullam a blandit ante, pulvinar blandit arcu. Nulla facilisi.
+          <img ng-if = "existed('sport','swimming')" src="img/cover/swimming.jpg" class="cover-image">
+          <h2 ng-if = "existed('sport','swimming')" class="article_title">Phelps Climbs Podium No. 19</h2>
+          <div ng-if = "existed('sport','swimming')" class="article_content">
+           "I started smiling with 25 meters to go," Phelps said. "This still is fun."
 
-            Fusce finibus leo nec magna finibus mollis. Nunc placerat cursus cursus. Donec luctus pharetra elit, eget efficitur dolor tincidunt vel. Aliquam sodales tempor sollicitudin. 
-          </div>
+The Baltimore-raised son of a single mother amassed his trove over three Olympics—2004, 2008 and 2012—after swimming as a gangly 15-year-old in the 2000 Games but not winning a medal. Phelps's quintessential performance came in 2008 in Beijing, when he won a record eight golds—every event he entered. Unlike many of the specialists who came before him, Phelps dominated in three areas: the freestyle, butterfly and the individual medley, a combination of the butterfly, backstroke, breaststroke and freestyle. He recast what was possible for a single swimmer to do, setting the stage for current American stars Ryan Lochte and 17-year-old Missy Franklin to enter and succeed in numerous events.
+
+
+Of the five Olympians who have won the most medals, the 27-year-old Phelps owns by far the largest share in gold: nearly 80%. He also is the only swimmer on the list, which includes Latynina (18 medals), Soviet gymnasts Nikolai Andrianov (15) and Boris Shakhlin (13) and Italian fencer Edoardo Mangiarotti (13), who took five Games to amass his medals.
+
+"Phelps beat my record, but I don't think any female athletes will anytime soon," Latynina said in an interview with R-Sport, the sports outlet of Russian state-owned news agency RIA Novosti.
+
+Phelps now stands alongside transcendent American athletes such as Babe Ruth, who excelled as a hitter, pitcher and fielder, and Jim Thorpe, who won 1912 Olympic gold medals for pentathlon and decathlon and played American football.
+
+Phelps's eight golds in Beijing surpassed American Mark Spitz's seven at the 1972 Olympics in Munich, winning Phelps millions in endorsements and prompting fascination in everything from how he trains to how many calories he consumes. The sport of swimming has risen with him, most recently helping draw to the U.S. Olympic trials in Omaha more than 10,000 fans per night.
+
+Born with a body designed to swim—long arms on his 6-foot-4-inch frame, huge hands and paddle-sized feet—Phelps put it through punishing training daily for years. A tight cocoon protected him as his fame expanded: his mother cheering at his races, his coach, Bob Bowman, praising and pushing Phelps since he was a child.   </div>
+           <img ng-if = "existed('sport','badminton')" src="img/cover/badminton.jpg" class="cover-image">
+          <h2 ng-if = "existed('sport','badminton')" class="article_title">Aussies benefit from badminton tanking scandal</h2>
+          <div ng-if = "existed('sport','badminton')" class="article_content">
+         The Australian doubles pairing of Renuga Veeran and Leanne Choo have been sensationally promoted into the Olympic quarter-finals as a result of badminton's "tanking" scandal.
+Eight players have been disqualified for throwing group stage contests to secure an easier draw through the tournament.
+During play on Day Four the women from China, Indonesia and South Korea were warned for repeated errors and netted shots.
+The situation became so farcical that spectators were heckling the doubles pairs and calling for them to get off the court.
+Veeran and Choo finished third in group C after a series of round-robin matches and were eliminated from competition on Monday.
+Only the top two in each group qualify for the quarter-finals.
+However the Badminton World Federation's decision to disqualify four pairs, including South Korea's Ha Jung-eun and Kim Min-jung and Indonesia's Greysia Polii and Meiliana Jauhari - both from group C - installed the Australians as group winners.
+Appeals by Indonesia and South Korea were later dismissed.
+AOC team liaison Tracie Edmondson told Grandstand that a referee in the match between the South Koreans and Indonesians had issued black cards - normally an automatic disqualification - to the teams after they hit shots into the net and made multiple mistakes in an attempt to lose the match to gain an easier draw.   
+</div>
         </div>
       </ion-slide>
-      <ion-slide>
+
+      <ion-slide >
         <div class="box s_lide">
-          <img src="img/cover/PingPong2.jpg" class="cover-image">
-          <h2 class="article_title">Something Table Tennis</h2>
-          <div class="article_content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus efficitur felis in molestie eleifend. Aenean feugiat augue et enim pulvinar iaculis. Mauris arcu felis, feugiat vitae scelerisque non, sollicitudin vel massa. Nulla eu odio est. Suspendisse vel sapien dolor. Suspendisse potenti. Cras rutrum id turpis quis tincidunt. Nullam a blandit ante, pulvinar blandit arcu. Nulla facilisi.
+          <img ng-if = "existed('athlete','Aliya Garayeva')" src="img/cover/Aliya-Garayeva.jpg" class="cover-image">
+          <h2 ng-if = "existed('athlete','Aliya Garayeva')" class="article_title">ALIYA GARAYEVA: YOU JUST HAVE TO LOVE RG</h2>
+          <div ng-if = "existed('athlete','Aliya Garayeva')" class="article_content">
+           Right after Olympics the 25-year-old Garayeva decided to end her career. She feels it was a tough, but at the same time a necessary move. “Ending a career is always difficult and at first when I understood that soon it’s going to be over, when I had only few competitions left, I could come to training and just cry,” admits Garayeva.
 
-            Fusce finibus leo nec magna finibus mollis. Nunc placerat cursus cursus. Donec luctus pharetra elit, eget efficitur dolor tincidunt vel. Aliquam sodales tempor sollicitudin. 
-          </div>
+The decision was especially hard because of Olympics where Garayeva ended with the fourth place. “Of course I would have wanted an Olympic medal. However I thought that I’m not going to pull through another four years,” she says. “If I would have aimed for another year or two, it wouldn’t have made any sense. So I decided to finish.”</div>
+        
+        <img ng-if = "existed('athlete','Neta Rivkin')" src="img/cover/Israeli_Neta.jpg" class="cover-image">
+          <h2 ng-if = "existed('athlete','Neta Rivkin')" class="article_title">Israeli Neta Rivkin is the 7th Best Rhythmic Gymnast in the World</h2>
+          <div ng-if = "existed('athlete','Neta Rivkin')" class="article_content">
+          This Israeli Athlete is on fire!
+
+Neta Rivkin is the all time best Israeli rhythmic gymnast. She has achieved what no one else has: She won silver medals in the individual hoop competition and in clubs at the 2011 Rhythmic Gymnastics European Championships, and a bronze medal in the individual hoop final at the 2011 Rhythmic Gymnastics World Championships.
+
+Her biggest achievement to date is placing 7th all around in the 2012 London Olympic Games.</div>
+        
         </div>
       </ion-slide>
+      
+
+      
     </ion-slide-box>
   </ion-content>
 </ion-view>
