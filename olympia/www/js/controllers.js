@@ -143,7 +143,7 @@ angular.module('starter.controllers', [])
 .controller('firstUserSportsCtrl',function($scope,$rootScope){
 		
 	for (var j = 0; j < $rootScope.sports.length ; j++){
-		$("#"+$rootScope.sports[i].type).css("background-color","#C8C8C8");
+		$("#"+$rootScope.sports[j].type).css("background-color","#C8C8C8");
 	}
 	
 	$scope.setSport = function(sport){
@@ -169,7 +169,7 @@ angular.module('starter.controllers', [])
 .controller('firstUserAthletesCtrl',function($scope,$rootScope){
 	
 	for (var j = 0; j < $rootScope.athletes.length ; j++){
-		$("#"+$rootScope.athletes[i].short_name).css("background-color","#C8C8C8");
+		$("#"+$rootScope.athletes[j].short_name).css("background-color","#C8C8C8");
 	}
 		
 		
